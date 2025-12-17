@@ -11,5 +11,5 @@ jobs:
           rsync -av ./ /root/ros2_ws/src/mypkg/
           cd /root/ros2_ws
           colcon build
-          source install/setup.bash
+          . install/setup.bash
           bash src/mypkg/test/test.bash
