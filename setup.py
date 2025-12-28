@@ -23,8 +23,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'talker = mypkg.talker:main',
-            'listener = mypkg.listener:main',
+            'ping_talker = mypkg.ping_talker:main',
+            'ping_listener = mypkg.ping_listener:main',
         ],
     },
 )
