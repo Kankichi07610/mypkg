@@ -6,12 +6,12 @@ import launch_ros.actions
 
 def generate_launch_description():
 
-    talker = launch_ros.actions.Node(
+    ping_talker = launch_ros.actions.Node(
         package='mypkg',
         executable='ping_talker',
         )
 
-    listener = launch_ros.actions.Node(
+    ping_listener = launch_ros.actions.Node(
         package='mypkg',
         executable='ping_listener',
         output='screen'
