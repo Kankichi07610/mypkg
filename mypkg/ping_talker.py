@@ -8,7 +8,7 @@ class pingtalker(Node):
         self.pub = self.create_publisher(String, 'test_talker', 10) #テスト用
         self.create_timer(1.0, self.cb)
 
-    def cd(self):
+    def cb(self):
         msg = String()
         msg.data = "test"
         self.pub.publish(msg)
