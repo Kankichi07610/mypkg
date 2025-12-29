@@ -1,18 +1,25 @@
-import rclpy #ROS 2のクライアントのためのライブラリ
-from rclpy.node import Node      #ノードを実装するためのNodeクラス（クラスは第10回で）
-from std_msgs.msg import Int16   #通信の型（16ビットの符号付き整数）
-rclpy.init()
-node = Node("talker")            #ノード作成（nodeという「オブジェクト」を作成）
-pub = node.create_publisher(Int16, "countup", 10)   #パブリッシャのオブジェクト作成
-n = 0 #カウント用変数
+import rclpy #クライアントのためのライブラリ
+from rclpy.node import Node
+from std_msgs.msg import String   #テキストを送るのでString
 
-def cb():          #20行目で定期実行されるコールバック関数
-    global n       #関数を抜けてもnがリセットされないようにしている
-    msg = Int16()  #メッセージの「オブジェクト」
-    msg.data = n   #msgオブジェクトの持つdataにnを結び付け
-    pub.publish(msg)        #pubの持つpublishでメッセージ送信
-    n += 1
+class pingtalker(Node):
+    def __init__(self):
+        super().__init__('ping_talker')
+        self.pub = self.create_publisher(String, 'test_talker', 10) #テスト用
+        self.create_timer(1.0, self.cb)
+
+    def cd(self):
+        msg = String()
+        msg.data = "test"
+        self.pub.publish(msg)
+        self.get_logger().info('test')
 
 def main():
-    node.create_timer(0.5, cb)  #タイマー設定
-    rclpy.spin(node)            #実行（無限ループ）
+    rclpy.init()
+    node = pingtalker()
+    rclpy.spin(node)
+    node.destroy_node()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()
