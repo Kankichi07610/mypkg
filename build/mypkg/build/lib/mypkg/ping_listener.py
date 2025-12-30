@@ -10,7 +10,7 @@ class pinglistener(Node):
     def cb(self, msg):
         error = msg.data
 
-        if 'time=' in error:
+        if 'time=' in val:
             # 前半の文章を切る
             first = error.split('time=')[1]
 

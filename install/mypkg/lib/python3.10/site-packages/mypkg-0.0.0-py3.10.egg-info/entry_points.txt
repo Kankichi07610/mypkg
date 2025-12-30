@@ -1,0 +1,4 @@
+[console_scripts]
+ping_listener = mypkg.ping_listener:main
+ping_talker = mypkg.ping_talker:main
+

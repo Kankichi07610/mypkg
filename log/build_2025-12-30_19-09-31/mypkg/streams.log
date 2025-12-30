@@ -1,0 +1,42 @@
+[0.895s] Invoking command in '/home/tyan1022/ros2_ws/src/mypkg': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/tyan1022/ros2_ws/src/mypkg/build/mypkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tyan1022/ros2_ws/src/mypkg/install/mypkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/mypkg build --build-base /home/tyan1022/ros2_ws/src/mypkg/build/mypkg/build install --record /home/tyan1022/ros2_ws/src/mypkg/build/mypkg/install.log --single-version-externally-managed install_data
+[1.149s] running egg_info
+[1.150s] creating build/mypkg/mypkg.egg-info
+[1.151s] writing build/mypkg/mypkg.egg-info/PKG-INFO
+[1.163s] writing dependency_links to build/mypkg/mypkg.egg-info/dependency_links.txt
+[1.163s] writing entry points to build/mypkg/mypkg.egg-info/entry_points.txt
+[1.164s] writing requirements to build/mypkg/mypkg.egg-info/requires.txt
+[1.164s] writing top-level names to build/mypkg/mypkg.egg-info/top_level.txt
+[1.165s] writing manifest file 'build/mypkg/mypkg.egg-info/SOURCES.txt'
+[1.169s] reading manifest file 'build/mypkg/mypkg.egg-info/SOURCES.txt'
+[1.170s] writing manifest file 'build/mypkg/mypkg.egg-info/SOURCES.txt'
+[1.171s] running build
+[1.171s] running build_py
+[1.172s] creating /home/tyan1022/ros2_ws/src/mypkg/build/mypkg/build
+[1.172s] creating /home/tyan1022/ros2_ws/src/mypkg/build/mypkg/build/lib
+[1.173s] creating /home/tyan1022/ros2_ws/src/mypkg/build/mypkg/build/lib/mypkg
+[1.173s] copying mypkg/ping_listener.py -> /home/tyan1022/ros2_ws/src/mypkg/build/mypkg/build/lib/mypkg
+[1.174s] copying mypkg/ping_talker.py -> /home/tyan1022/ros2_ws/src/mypkg/build/mypkg/build/lib/mypkg
+[1.174s] copying mypkg/__init__.py -> /home/tyan1022/ros2_ws/src/mypkg/build/mypkg/build/lib/mypkg
+[1.175s] running install
+[1.176s] running install_lib
+[1.177s] creating /home/tyan1022/ros2_ws/src/mypkg/install/mypkg/lib/python3.10/site-packages/mypkg
+[1.177s] copying /home/tyan1022/ros2_ws/src/mypkg/build/mypkg/build/lib/mypkg/ping_listener.py -> /home/tyan1022/ros2_ws/src/mypkg/install/mypkg/lib/python3.10/site-packages/mypkg
+[1.177s] copying /home/tyan1022/ros2_ws/src/mypkg/build/mypkg/build/lib/mypkg/ping_talker.py -> /home/tyan1022/ros2_ws/src/mypkg/install/mypkg/lib/python3.10/site-packages/mypkg
+[1.178s] copying /home/tyan1022/ros2_ws/src/mypkg/build/mypkg/build/lib/mypkg/__init__.py -> /home/tyan1022/ros2_ws/src/mypkg/install/mypkg/lib/python3.10/site-packages/mypkg
+[1.179s] byte-compiling /home/tyan1022/ros2_ws/src/mypkg/install/mypkg/lib/python3.10/site-packages/mypkg/ping_listener.py to ping_listener.cpython-310.pyc
+[1.181s] byte-compiling /home/tyan1022/ros2_ws/src/mypkg/install/mypkg/lib/python3.10/site-packages/mypkg/ping_talker.py to ping_talker.cpython-310.pyc
+[1.182s] byte-compiling /home/tyan1022/ros2_ws/src/mypkg/install/mypkg/lib/python3.10/site-packages/mypkg/__init__.py to __init__.cpython-310.pyc
+[1.183s] running install_data
+[1.183s] creating /home/tyan1022/ros2_ws/src/mypkg/install/mypkg/share/ament_index
+[1.184s] creating /home/tyan1022/ros2_ws/src/mypkg/install/mypkg/share/ament_index/resource_index
+[1.185s] creating /home/tyan1022/ros2_ws/src/mypkg/install/mypkg/share/ament_index/resource_index/packages
+[1.186s] copying resource/mypkg -> /home/tyan1022/ros2_ws/src/mypkg/install/mypkg/share/ament_index/resource_index/packages
+[1.186s] copying package.xml -> /home/tyan1022/ros2_ws/src/mypkg/install/mypkg/share/mypkg
+[1.187s] copying launch/talk_listen.launch.py -> /home/tyan1022/ros2_ws/src/mypkg/install/mypkg/share/mypkg
+[1.187s] running install_egg_info
+[1.191s] Copying build/mypkg/mypkg.egg-info to /home/tyan1022/ros2_ws/src/mypkg/install/mypkg/lib/python3.10/site-packages/mypkg-0.0.0-py3.10.egg-info
+[1.194s] running install_scripts
+[1.224s] Installing ping_listener script to /home/tyan1022/ros2_ws/src/mypkg/install/mypkg/lib/mypkg
+[1.225s] Installing ping_talker script to /home/tyan1022/ros2_ws/src/mypkg/install/mypkg/lib/mypkg
+[1.225s] writing list of installed files to '/home/tyan1022/ros2_ws/src/mypkg/build/mypkg/install.log'
+[1.255s] Invoked command in '/home/tyan1022/ros2_ws/src/mypkg' returned '0': CONDA_PROMPT_MODIFIER=(base) PYTHONPATH=/home/tyan1022/ros2_ws/src/mypkg/build/mypkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tyan1022/ros2_ws/src/mypkg/install/mypkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/mypkg build --build-base /home/tyan1022/ros2_ws/src/mypkg/build/mypkg/build install --record /home/tyan1022/ros2_ws/src/mypkg/build/mypkg/install.log --single-version-externally-managed install_data
