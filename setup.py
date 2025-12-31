@@ -16,7 +16,7 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='tyan1022',
+    maintainer='Kanta Ogasawara',
     maintainer_email='ogakanta05@gmail.com',
     description='ロボットシステム学',
     license='BSD-3-Clause',

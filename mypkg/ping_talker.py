@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2025 Kanta Ogasawara
+# SPDX-License-Identifier: BSD-3-Clause
+
 import rclpy #クライアントのためのライブラリ
 from rclpy.node import Node
 from std_msgs.msg import String   #テキストを送るのでString
@@ -11,10 +14,18 @@ class pingtalker(Node):
 
     def cb(self):
         msg = String()
-        ping = subprocess.run('ping -c 1 google.com', shell=True, stdout=subprocess.PIPE, text=True)
-        msg.data = ping.stdout
+
+        google = ['ping', '-c', '1', '-W', '1', '8.8.8.8']
+        
+        pf = subprocess.run(google, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        
+        if pf.returncode == 0:
+            msg.data = pf.stdout
+        else:
+            msg.data = "Time out"
+
         self.pub.publish(msg)
-        self.get_logger().info(f"通信確認: {msg.data}")
+        #self.get_logger().info(f"Connect test: {msg.data}")
 
 def main():
     rclpy.init()

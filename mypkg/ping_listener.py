@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2025 Kanta Ogasawara
+# SPDX-License-Identifier: BSD-3-Clause
+
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
@@ -17,11 +20,16 @@ class pinglistener(Node):
             # 後半の文章を切る
             finish = first.split(' ms')[0]
 
-            # 数字だけにして表示
-            self.get_logger().info(f"Connection Ok: {finish} ms")
+            if float(finish) > 15.0:
+            
+                self.get_logger().warn(f"Connection Bad | slow: {finish} ms")
+            else:
+            
+                self.get_logger().info(f"Connection Ok | Time: {finish} ms")
 
         else:
-            self.get_logger().error(f"Network error \n{error}")
+            
+            self.get_logger().error(f"Network error | {error}")
 
 def main():
     rclpy.init()
