@@ -47,3 +47,8 @@ $ ros2 launch mypkg talk_listen.launch.py
 - **サブスクライブするトピック**: `test_talker`
 
 
+## トピックの説明
+
+| トピック名 | 型 | 内容 |
+|:---|:---|:---|
+| `test_talker` | `std_msgs/String` | Pingコマンドの出力|
