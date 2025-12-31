@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # SPDX-FileCopyrightText: 2025 Kanta Ogasawara
 # SPDX-License-Identifier: BSD-3-Clause
 
