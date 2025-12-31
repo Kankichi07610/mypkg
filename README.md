@@ -6,13 +6,13 @@
 ![Python 3.10](https://img.shields.io/badge/Python-3.10-F9DC3E?style=flat&logo=python&logoColor=blue)
 ![ROS2 Humble](https://img.shields.io/badge/ROS2-Humble-3399FF?style=flat&logo=ros)
 
-本パッケージは、インターネット接続状況(Google Public DNS: 8.8.8.)8を一秒間隔でチェックし、応答速度(Ping値)を監視する ROS 2 パッケージです。
+本パッケージは、インターネット接続状況(Google Public DNS: 8.8.8.8)を一秒間隔でチェックし、応答速度(Ping値)を監視する ROS 2 パッケージです。
 
 通信遅延が発生した場合や接続が切断された場合に、ログのレベルをユーザーに表示します。
 
 ## 実行方法
 
-### 以下のコマンドで実行します。
+以下のコマンドで実行します。
 ```
 $ ros2 launch mypkg talk_listen.launch.py
 ```
@@ -22,7 +22,7 @@ $ ros2 launch mypkg talk_listen.launch.py
 本パッケージは、ネットワークの状態に応じて以下のように出力します。
 
 **正常時**  
-応答速度が50ms以下の場合,INFOログで応答時間を表示します。  
+応答速度が50ms以下の場合、INFOログで応答時間を表示します。  
 `[ping_listener-2] [INFO] [1767191976.971079533] [ping_listener]: Connection Ok | Time: 11.2 ms`
 
 
@@ -68,3 +68,7 @@ $ ros2 launch mypkg talk_listen.launch.py
 ## 謝辞
 このパッケージのコードの一部は、下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda）のものを、本人の許可を得て自身の著作としたものです。
 - [ryuichiueda/slides_marp/robosys2025](https://github.com/ryuichiueda/slides_marp/tree/master/robosys2025)
+
+## 参考文献
+- [subprocess --- サブプロセス管理 (Python 3.10 ドキュメント)](https://docs.python.org/ja/3.10/library/subprocess.html)
+- [ping(8) manual page - Linux JM Project](https://linuxjm.osdn.jp/html/netkit/man8/ping.8.html)
