@@ -66,7 +66,7 @@ $ ros2 launch mypkg talk_listen.launch.py
 © 2025 Kanta Ogasawara
 
 ## 謝辞
-このパッケージのコードの一部は、下記のスライド（CC-BY-SA 4.0 by Ryuichi Ueda）のものを、本人の許可を得て自身の著作としたものです。
+このパッケージのコードの一部は、下記のスライド(CC-BY-SA 4.0 by Ryuichi Ueda)のものを、本人の許可を得て自身の著作としたものです。
 - [ryuichiueda/slides_marp/robosys2025](https://github.com/ryuichiueda/slides_marp/tree/master/robosys2025)
 
 ## 参考文献
