@@ -12,8 +12,19 @@
 
 ## 実行方法
 
-### 監視ノードの起動
+### 以下のコマンドで実行します。
 ```
 $ ros2 launch mypkg talk_listen.launch.py
 ```
+
+### 実行結果の例
+
+本パッケージは、ネットワークの状態に応じて以下のように出力します。
+
+**正常時**
+応答速度が50ms以下の場合,INFOログで応答時間を表示します。
+`[ping_listener-2] [INFO] [1767191976.971079533] [ping_listener]: Connection Ok | Time: 11.2 ms`
+**遅延発生時**
+応答速度が50ms以上の場合、WARNログで応答時間を表示します。
+`[ping_listener-2] [WARN] [1767191982.948914955] [ping_listener]: Connection Bad | slow: 52.7 ms`
 
