@@ -21,7 +21,7 @@ class pinglistener(Node):
             # 後半の文章を切る
             finish = first.split(' ms')[0]
 
-            if float(finish) > 15.0:
+            if float(finish) > 50.0:
             
                 self.get_logger().warn(f"Connection Bad | slow: {finish} ms")
             else:
